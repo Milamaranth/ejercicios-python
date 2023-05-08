@@ -75,6 +75,9 @@ def ahorcado():
     print(muñeco[0])
     while True:
         letra = input("Indica una letra: ").lower()
+        if len("letra") != 1:
+            print("Escribe una única letra")
+            continue
         if letra in palabraList:
             faltan += -palabraList.count(letra)
             relleno = sustituirLetra(relleno,letra)
